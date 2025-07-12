@@ -211,10 +211,18 @@
                 "enablePullDownRefresh": true
             }
         },
-                {
+        {
             "path": "pages/spotCheck/taskStart/index",
             "style": {
                 "navigationBarTitleText": "点检任务",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/spotCheck/taskArea/index",
+            "style": {
+                "navigationBarTitleText": "点检区域",
                 "navigationStyle": "custom",
                 "enablePullDownRefresh": true
             }
@@ -226,7 +234,7 @@
                 "navigationStyle": "custom",
                 "enablePullDownRefresh": true
             }
-        },
+        }, 
         {
             "path": "pages/spotCheck/taskVoid",
             "style": {
@@ -235,30 +243,6 @@
                 "enablePullDownRefresh": true
             }
         }
-        // {
-        //     "path": "pages/jianyi/carmobile/list",
-        //     "style": {
-        //         "navigationBarTitleText": "移动车辆"
-        //     }
-        // },
-        // {
-        //     "path": "pages/jianyi/carmobile/container",
-        //     "style": {
-        //         "navigationBarTitleText": "新增"
-        //     }
-        // },
-        // {
-        //     "path": "pages/dev/bizoutapply/list",
-        //     "style": {
-        //         "navigationBarTitleText": "出差申请"
-        //     }
-        // },
-        // {
-        //     "path": "pages/dev/bizoutapply/container",
-        //     "style": {
-        //         "navigationBarTitleText": "新增"
-        //     }
-        // }
     ],
     "easycom": {
         "custom": {

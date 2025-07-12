@@ -62,7 +62,9 @@ const onClickItem = (e: any) => {
 }
 
 const clickArea = (item: any) => {
-	console.log('item', item)
+		uni.navigateTo({
+		url: "/pages/spotCheck/taskArea/index"
+	})
 }
 
 onLoad((options) => {
