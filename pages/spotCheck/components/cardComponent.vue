@@ -1,72 +1,60 @@
 <template>
   <view class="container">
-    <view v-for="task in props.listData" :key="task.id" class="task-card">
+    <view class="task-card">
       <!-- 标题和状态 -->
       <view class="card-header">
         <view>
-        <text class="task-name">{{ task.taskName }}</text>
-               <text :class="['status-text', getStatusClass(task.status)]">{{ task.status }}</text>
+          <text class="task-name">{{ cardData.taskName }}</text>
+          <text :class="['status-text', getStatusClass(cardData.status)]">{{ cardData.status }}</text>
         </view>
-
-     <!-- <text class="progress-text">{{ task.progress }}</text> -->
-      <text :class="['progress-text', getProgressClass(task.progress)]">{{ task.progress }}</text>
+        <text :class="['progress-text', getProgressClass(cardData.progress)]">{{ cardData.progress }}</text>
       </view>
-      
+
       <!-- 任务详情 -->
       <view class="card-body">
         <view class="info-row">
           <text class="info-label">点检路线：</text>
-          <text class="info-value">{{ task.route }}</text>
+          <text class="info-value">{{ cardData.route }}</text>
         </view>
         <view class="info-row">
           <text class="info-label">点检部门：</text>
-          <text class="info-value">{{ task.department }}</text>
+          <text class="info-value">{{ cardData.department }}</text>
         </view>
         <view class="info-row">
           <text class="info-label">专业名称：</text>
-          <text class="info-value">{{ task.specialty }}</text>
+          <text class="info-value">{{ cardData.specialty }}</text>
         </view>
         <view class="info-row">
           <text class="info-label">执行岗位：</text>
-          <text class="info-value">{{ task.position }}</text>
+          <text class="info-value">{{ cardData.position }}</text>
         </view>
-        <view v-if="task.handler" class="info-row">
+        <view v-if="cardData.handler" class="info-row">
           <text class="info-label">处理人：</text>
-          <text class="info-value">{{ task.handler }}</text>
+          <text class="info-value">{{ cardData.handler }}</text>
         </view>
-        <view v-if="task.planStartTime" class="info-row">
+        <view v-if="cardData.planStartTime" class="info-row">
           <text class="info-label">计划开始时间：</text>
-          <text class="info-value">{{ task.planStartTime }}</text>
+          <text class="info-value">{{ cardData.planStartTime }}</text>
         </view>
         <view class="info-row">
           <text class="info-label">计划结束时间：</text>
-          <text class="info-value">{{ task.planEndTime }}</text>
+          <text class="info-value">{{ cardData.planEndTime }}</text>
         </view>
         <view class="info-row last-label">
           <text class="info-label">点检进度：</text>
-          <text class="info-value">{{ task.progressRate }}</text>
+          <text class="info-value">{{ cardData.progressRate }}</text>
         </view>
-      </view>
-      
-      <!-- 操作按钮 -->
-      <view v-if="task.progress === '未开始' && props.buttonShow" class="card-footer">
-        <button class="action-btn primary" @click="startInspection(task)">开始点检</button>
-        <button class="action-btn" @click="delayTask(task)">任务延期</button>
-        <button class="action-btn danger" @click="cancelTask(task)">任务作废</button>
       </view>
     </view>
   </view>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, reactive, computed, defineProps } from "vue";
 
 const props = defineProps({
-	buttonShow: {
-		 type: Boolean,
-	},
-  listData: {
-    type: Array,
+  cardData: {
+    type: Object,
     required: true,
   }
 })
@@ -87,23 +75,6 @@ const getProgressClass = (progress) => {
   }[progress] || '';
 };
 
-const startInspection = (task) => {
-  console.log('开始点检:', task);
-  // 实现开始点检逻辑
-  		uni.navigateTo({
-			url: `/pages/spotCheck/taskStart/index?taskId=${task.id}`
-		})
-};
-
-const delayTask = (task) => {
-  console.log('任务延期:', task);
-  // 实现任务延期逻辑
-};
-
-const cancelTask = (task) => {
-  console.log('任务作废:', task);
-  // 实现任务作废逻辑
-};
 </script>
 
 <style scoped>
@@ -157,11 +128,11 @@ const cancelTask = (task) => {
 }
 
 .progress1 {
-    color:  #887c0c;
+  color: #887c0c;
 }
 
 .progress4 {
-    color:  #d2131d;
+  color: #d2131d;
 }
 
 .progress-text {
@@ -179,6 +150,7 @@ const cancelTask = (task) => {
   margin-bottom: 16rpx;
   font-size: 28rpx;
 }
+
 .last-label {
   border-top: 1rpx solid #d5d5d5;
   padding-top: 16rpx;

@@ -1,5 +1,6 @@
 <template>
   <view>
+    <!-- 导航 -->
     <view class="header">
       <view class="headerContent">
         <view>
@@ -14,6 +15,7 @@
       </view>
     </view>
 
+    <!-- 内容 -->
     <view class="padding">
 
       <view class="content">
@@ -29,6 +31,7 @@
           </view>
           <view v-if="current0 === 0">
             <OneComponent :listData="oneListData" :buttonShow="true"></OneComponent>
+            <TableCardComponent :listData="oneListData" :buttonShow="true"></TableCardComponent>
           </view>
           <view v-if="current0 === 1">00000011111111111111111</view>
         </view>
@@ -50,7 +53,7 @@
 <script setup lang="ts">
 import { onLoad, onReachBottom } from "@dcloudio/uni-app";
 
-import OneComponent from "./components/OneComponent.vue";
+import TableCardComponent from "./components/TableCardComponent.vue";
 import { ref, reactive, computed } from "vue";
 const items = ref(["今日任务", "已办任务"]);
 const items0 = ref(["待认领", "已认领"]);

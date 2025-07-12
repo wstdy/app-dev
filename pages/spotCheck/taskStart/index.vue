@@ -7,7 +7,7 @@
 	</view>
 	<view>
 		<view class="title">基本信息</view>
-		<OneComponent :listData="oneListData"></OneComponent>
+		<CardComponent :cardData="cardData" />
 	</view>
 	<view class="area">
 		<view class="title">点检区域未完成2个</view>
@@ -32,10 +32,24 @@
 <script setup lang="ts">
 import { onLoad, onReachBottom } from "@dcloudio/uni-app";
 import { ref, reactive, computed } from "vue";
-import OneComponent from "../components/OneComponent.vue";
+import CardComponent from "../components/CardComponent.vue";
 
 const current = ref(0)
 const items = ref(["点检记录", "点检记事"])
+const cardData = reactive({
+    id: 1,
+    taskName: 'XXXXXXXX点检任务',
+    status: '待认领',
+    progress: '点检中',
+    route: 'xxxxxxx点检路线',
+    department: '设备部',
+    specialty: '电气',
+    position: '电气点检员',
+    planStartTime: '',
+    planEndTime: '2025-04-09 15:00:00',
+    progressRate: '15/25',
+    handler: ''
+  })
 const oneListData = ref([])
 const AreaList = ref([
 	{ id: '1', name: '区域一', value: '未完成', },
@@ -52,14 +66,14 @@ const clickArea = (item: any) => {
 }
 
 onLoad((options) => {
-	const { taskId } = options
-	const storeListData = uni.getStorageSync('key')
+	// const { taskId } = options
+	// const storeListData = uni.getStorageSync('key')
 
-	if (storeListData?.length && taskId) {
-		let currentData = storeListData.filter((v: any) => v.id == taskId)
-		console.log('currentData', currentData)
-		oneListData.value = currentData
-	}
+	// if (storeListData?.length && taskId) {
+	// 	let currentData = storeListData.filter((v: any) => v.id == taskId)
+	// 	console.log('currentData', currentData)
+	// 	oneListData.value = currentData
+	// }
 });
 onReachBottom(() => { });
 
