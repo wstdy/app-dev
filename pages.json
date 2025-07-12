@@ -210,6 +210,22 @@
                 "navigationStyle": "custom",
                 "enablePullDownRefresh": true
             }
+        },
+        {
+            "path": "pages/spotCheck/taskExtension",
+            "style": {
+                "navigationBarTitleText": "任务延期",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/spotCheck/taskVoid",
+            "style": {
+                "navigationBarTitleText": "任务作废",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
         }
         // {
         //     "path": "pages/jianyi/carmobile/list",
