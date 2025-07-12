@@ -15,6 +15,7 @@
     </view>
 
     <view class="padding">
+
       <view class="content">
         <view>
           <uni-segmented-control :current="current" :values="items" :style-type="styleType" :active-color="activeColor"
@@ -27,7 +28,7 @@
               :active-color="activeColor" @clickItem="onClickItem0" />
           </view>
           <view v-if="current0 === 0">
-            <OneComponent :listData="oneListData"></OneComponent>
+            <OneComponent :listData="oneListData" :buttonShow="true"></OneComponent>
           </view>
           <view v-if="current0 === 1">00000011111111111111111</view>
         </view>

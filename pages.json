@@ -210,6 +210,14 @@
                 "navigationStyle": "custom",
                 "enablePullDownRefresh": true
             }
+        },
+        {
+            "path": "pages/spotCheck/taskStart/index",
+            "style": {
+                "navigationBarTitleText": "点检任务",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
         }
         // {
         //     "path": "pages/jianyi/carmobile/list",

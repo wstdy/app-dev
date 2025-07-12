@@ -49,7 +49,7 @@
       </view>
       
       <!-- 操作按钮 -->
-      <view v-if="task.progress === '未开始'" class="card-footer">
+      <view v-if="task.progress === '未开始' && props.buttonShow" class="card-footer">
         <button class="action-btn primary" @click="startInspection(task)">开始点检</button>
         <button class="action-btn" @click="delayTask(task)">任务延期</button>
         <button class="action-btn danger" @click="cancelTask(task)">任务作废</button>
@@ -62,6 +62,9 @@
 import { ref, reactive, computed, defineProps } from "vue";
 
 const props = defineProps({
+	buttonShow: {
+		 type: Boolean,
+	},
   listData: {
     type: Array,
     required: true,
@@ -87,6 +90,9 @@ const getProgressClass = (progress) => {
 const startInspection = (task) => {
   console.log('开始点检:', task);
   // 实现开始点检逻辑
+  		uni.navigateTo({
+			url: `/pages/spotCheck/taskStart/index?taskId=${task.id}`
+		})
 };
 
 const delayTask = (task) => {
