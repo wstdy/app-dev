@@ -1,0 +1,542 @@
+[{
+	"i": "1689581848467_5207",
+	"h": 260,
+	"type": "ChartLine",
+	"config": {
+		"title": "折线/柱状图",
+		"renderKey": 29,
+		"condition": {
+			"color": "#ee5858",
+			"selected": "#45b593"
+		},
+		"legend": {
+			"show": true,
+			"orient": "horizontal",
+			"left": "center",
+			"top": "bottom",
+			"right": "auto",
+			"bottom": "bottom",
+			"padding": 8,
+			"icon": "roundRect",
+			"itemWidth": 25,
+			"itemHeight": 14,
+			"textStyle": {
+				"color": "#000"
+			},
+			"formatter": "{name}"
+		},
+		"count": {
+			"show": true,
+			"unit": "统计单位",
+			"title": "统计标题"
+		},
+		"dataList": [{
+			"title": "图例1",
+			"valueKey": "name",
+			"apiColumns": [{
+				"csType": "String",
+				"prop": "name",
+				"label": "月份"
+			}, {
+				"csType": "Int64",
+				"prop": "value1",
+				"label": "金额"
+			}, {
+				"csType": "Int64",
+				"prop": "value2",
+				"label": "重量"
+			}, {
+				"csType": "Int64",
+				"prop": "value3",
+				"label": "销量"
+			}],
+			"apiData": [{
+				"name": "一月",
+				"value1": 10,
+				"value2": 100,
+				"value3": 1200
+			}, {
+				"name": "二月",
+				"value1": 20,
+				"value2": 200,
+				"value3": 1300
+			}, {
+				"name": "三月",
+				"value1": 30,
+				"value2": 300,
+				"value3": 1400
+			}, {
+				"name": "四月 ",
+				"value1": 40,
+				"value2": 400,
+				"value3": 1600
+			}, {
+				"name": "五月",
+				"value1": 50,
+				"value2": 500,
+				"value3": 1800
+			}, {
+				"name": "六月",
+				"value1": 60,
+				"value2": 600,
+				"value3": 2000
+			}, {
+				"name": "七月",
+				"value1": 70,
+				"value2": 700,
+				"value3": 2200
+			}, {
+				"name": "八月 ",
+				"value1": 80,
+				"value2": 800,
+				"value3": 2400
+			}, {
+				"name": "九月",
+				"value1": 90,
+				"value2": 900,
+				"value3": 2600
+			}, {
+				"name": "十月",
+				"value1": 100,
+				"value2": 1000,
+				"value3": 2800
+			}, {
+				"name": "十一月",
+				"value1": 110,
+				"value2": 1100,
+				"value3": 3000
+			}, {
+				"name": "十二月",
+				"value1": 120,
+				"value2": 1200,
+				"value3": 3200
+			}],
+			"total": 0,
+			"indicator": [{
+				"title": "",
+				"type": "line",
+				"color": "#d74242",
+				"name": "销售额",
+				"value": "value1",
+				"showAreaStyle": true,
+				"gradualStartColor": "#d72828",
+				"gradualEndColor": "#4fac4d"
+			}],
+			"apiConfig": {
+				"id": "copy1682508080882d89496",
+				"name": "chart-funnel",
+				"method": "GET",
+				"path": "test/chart-funnel",
+				"requestParamsConfigs": [{
+					"name": "keyword",
+					"dataType": "String",
+					"assignmentType": "value",
+					"value": "",
+					"config": ""
+				}],
+				"requestHeaderConfigs": [],
+				"requestBodyConfigs": []
+			}
+		}, {
+			"title": "图例2",
+			"valueKey": "name",
+			"apiColumns": [{
+				"csType": "String",
+				"prop": "name",
+				"label": "公司"
+			}, {
+				"csType": "Int64",
+				"prop": "value1",
+				"label": "金额"
+			}, {
+				"csType": "Int64",
+				"prop": "value2",
+				"label": "重量"
+			}, {
+				"csType": "Int64",
+				"prop": "value3",
+				"label": "销量"
+			}],
+			"apiData": [{
+				"name": "Sales",
+				"value1": 4200,
+				"value2": 5000,
+				"value3": 6000
+			}, {
+				"name": "Administration",
+				"value1": 4800,
+				"value2": 5800,
+				"value3": 4800
+			}, {
+				"name": "Information",
+				"value1": 2200,
+				"value2": 4500,
+				"value3": 5800
+			}, {
+				"name": "Development",
+				"value1": 3200,
+				"value2": 4000,
+				"value3": 6800
+			}],
+			"total": 0,
+			"indicator": [{
+				"title": "",
+				"type": "line",
+				"color": "#6051a9",
+				"name": "重量",
+				"value": "value2",
+				"showAreaStyle": false,
+				"gradualStartColor": "",
+				"gradualEndColor": ""
+			}, {
+				"title": "",
+				"type": "line",
+				"color": "#6051a9",
+				"name": "销量",
+				"value": "value3",
+				"showAreaStyle": false,
+				"gradualStartColor": "",
+				"gradualEndColor": ""
+			}],
+			"apiConfig": {
+				"id": "copy1682493068440d15120",
+				"name": "chart-radar",
+				"method": "GET",
+				"path": "test/chart-radar",
+				"requestParamsConfigs": [{
+					"name": "keyword",
+					"dataType": "String",
+					"assignmentType": "value",
+					"value": "",
+					"config": ""
+				}],
+				"requestHeaderConfigs": [],
+				"requestBodyConfigs": []
+			}
+		}],
+		"bar": {
+			"stack": false,
+			"label": {
+				"show": true,
+				"color": ""
+			}
+		},
+		"line": {
+			"smooth": false,
+			"stack": false,
+			"showAreaStyle": true,
+			"gradualStartColor": "#e12d2d",
+			"gradualEndColor": "#3c2020",
+			"showSymbol": true,
+			"label": {
+				"show": true,
+				"color": "#000000",
+				"position": "outside",
+				"fontWeight": "normal",
+				"fontSize": 12,
+				"formatter": null
+			}
+		},
+		"label": {
+			"show": false,
+			"color": "#000000",
+			"position": "outside",
+			"fontWeight": "normal",
+			"fontSize": 12,
+			"formatter": ""
+		},
+		"yAxis": [{
+			"name": "aa",
+			"nameLocation": "end",
+			"nameTextStyle": {
+				"color": "#ec5f5f",
+				"fontSize": 12,
+				"fontWeight": "normal"
+			},
+			"min": 0,
+			"max": 500,
+			"interval": 100,
+			"position": "left",
+			"type": "value",
+			"axisLabel": {
+				"formatter": "{value}",
+				"color": "#514ab0"
+			},
+			"axisLine": {
+				"show": true,
+				"lineStyle": {
+					"color": "#83f05c"
+				}
+			}
+		}],
+		"xAxis": [{
+			"position": "bottom",
+			"name": "bb",
+			"nameLocation": "end",
+			"nameTextStyle": {
+				"color": "#dd6ec5",
+				"fontSize": 12,
+				"fontWeight": "normal"
+			},
+			"type": "category",
+			"axisLabel": {
+				"formatter": "{value}",
+				"color": "#977220"
+			},
+			"axisLine": {
+				"show": true,
+				"lineStyle": {
+					"color": "#5948d5"
+				}
+			},
+			"data": ["Sales", "Administration", "Information", "Development"]
+		}],
+		"echarts": [{
+			"color": ["#d74242"],
+			"legend": {
+				"show": true,
+				"orient": "horizontal",
+				"left": "center",
+				"top": "bottom",
+				"right": "auto",
+				"bottom": "bottom",
+				"padding": 8,
+				"icon": "roundRect",
+				"itemWidth": 25,
+				"itemHeight": 14,
+				"textStyle": {
+					"color": "#000"
+				},
+				"formatter": "{name}",
+				"data": ["销售额"]
+			},
+			"tooltip": {
+				"trigger": "axis"
+			},
+			"xAxis": [{
+				"position": "bottom",
+				"name": "bb",
+				"nameLocation": "end",
+				"nameTextStyle": {
+					"color": "#dd6ec5",
+					"fontSize": 12,
+					"fontWeight": "normal"
+				},
+				"type": "category",
+				"axisLabel": {
+					"formatter": "{value}",
+					"color": "#977220"
+				},
+				"axisLine": {
+					"show": true,
+					"lineStyle": {
+						"color": "#5948d5"
+					}
+				},
+				"data": [ "一月",
+    "二月",
+    "三月",
+    "四月 ",
+    "五月",
+    "六月",
+    "七月",
+    "八月 ",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月"]
+			}],
+			"yAxis": [{
+				"name": "aa",
+				"nameLocation": "end",
+				"nameTextStyle": {
+					"color": "#ec5f5f",
+					"fontSize": 12,
+					"fontWeight": "normal"
+				},
+				"min": 0,
+				"max": 500,
+				"interval": 100,
+				"position": "left",
+				"type": "value",
+				"axisLabel": {
+					"formatter": "{value}",
+					"color": "#514ab0"
+				},
+				"axisLine": {
+					"show": true,
+					"lineStyle": {
+						"color": "#83f05c"
+					}
+				}
+			}],
+			"series": [{
+				"name": "销售额",
+				"type": "line",
+				"stack": "",
+				"smooth": false,
+				"areaStyle": {
+					"color": {
+						"type": "linear",
+						"x": 0,
+						"y": 0,
+						"x2": 0,
+						"y2": 1,
+						"colorStops": [{
+							"offset": 0,
+							"color": "#d72828"
+						}, {
+							"offset": 1,
+							"color": "#4fac4d"
+						}],
+						"global": false
+					}
+				},
+				"data": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120],
+				"showAreaStyle": true,
+				"gradualEndColor": "",
+				"gradualStartColor": "",
+				"symbol": "emptyCircle"
+			}]
+		}, {
+			"color": ["#6051a9", "#6051a9"],
+			"legend": {
+				"show": true,
+				"orient": "horizontal",
+				"left": "center",
+				"top": "bottom",
+				"right": "auto",
+				"bottom": "bottom",
+				"padding": 8,
+				"icon": "roundRect",
+				"itemWidth": 25,
+				"itemHeight": 14,
+				"textStyle": {
+					"color": "#000"
+				},
+				"formatter": "{name}",
+				"data": ["重量", "销量"]
+			},
+			"tooltip": {
+				"trigger": "axis"
+			},
+			"xAxis": [{
+				"position": "bottom",
+				"name": "bb",
+				"nameLocation": "end",
+				"nameTextStyle": {
+					"color": "#dd6ec5",
+					"fontSize": 12,
+					"fontWeight": "normal"
+				},
+				"type": "category",
+				"axisLabel": {
+					"formatter": "{value}",
+					"color": "#977220"
+				},
+				"axisLine": {
+					"show": true,
+					"lineStyle": {
+						"color": "#5948d5"
+					}
+				},
+				"data": ["Sales", "Administration", "Information", "Development"]
+			}],
+			"yAxis": [{
+				"name": "aa",
+				"nameLocation": "end",
+				"nameTextStyle": {
+					"color": "#ec5f5f",
+					"fontSize": 12,
+					"fontWeight": "normal"
+				},
+				"min": 0,
+				"max": 500,
+				"interval": 100,
+				"position": "left",
+				"type": "value",
+				"axisLabel": {
+					"formatter": "{value}",
+					"color": "#514ab0"
+				},
+				"axisLine": {
+					"show": true,
+					"lineStyle": {
+						"color": "#83f05c"
+					}
+				}
+			}],
+			"series": [{
+				"name": "重量",
+				"type": "line",
+				"stack": "",
+				"smooth": false,
+				"areaStyle": {
+					"color": {
+						"type": "linear",
+						"x": 0,
+						"y": 0,
+						"x2": 0,
+						"y2": 1,
+						"colorStops": [{
+							"offset": 0,
+							"color": "#e12d2d"
+						}, {
+							"offset": 1,
+							"color": "#3c2020"
+						}],
+						"global": false
+					}
+				},
+				"label": {
+					"show": true,
+					"color": "#000000",
+					"position": "outside",
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"formatter": null
+				},
+				"data": [5000, 5800, 4500, 4000],
+				"showAreaStyle": false,
+				"gradualEndColor": "",
+				"gradualStartColor": "",
+				"symbol": "emptyCircle"
+			}, {
+				"name": "销量",
+				"type": "line",
+				"stack": "",
+				"smooth": false,
+				"areaStyle": {
+					"color": {
+						"type": "linear",
+						"x": 0,
+						"y": 0,
+						"x2": 0,
+						"y2": 1,
+						"colorStops": [{
+							"offset": 0,
+							"color": "#e12d2d"
+						}, {
+							"offset": 1,
+							"color": "#3c2020"
+						}],
+						"global": false
+					}
+				},
+				"label": {
+					"show": true,
+					"color": "#000000",
+					"position": "outside",
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"formatter": null
+				},
+				"data": [6000, 4800, 5800, 6800],
+				"showAreaStyle": false,
+				"gradualEndColor": "",
+				"gradualStartColor": "",
+				"symbol": "emptyCircle"
+			}]
+		}]
+	}
+}]

@@ -1,0 +1,49 @@
+button[type='primary']{
+	background: #5E95FF;
+}
+.form-btn-box{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background: #fff;
+		border-top:1px solid #F2F2F2;
+		padding: 10px 0;
+		position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		z-index: 1;
+	}
+	.form-btn-box .button{
+		width: 160px;
+		height: 35px;
+		line-height: 35px;
+		background: #5E95FF;
+		border-radius: 20px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.form-btn-box .button[type='default'] {
+	    color: #B7BACA;
+	    background-color: #F3F4F8;
+	}
+	.form-fixed{
+
+	}
+
+	.form-fixed .uni-forms-item__label{
+		margin-left: 16rpx;
+	}
+
+	.form-fixed .uni-forms-item__content{
+		margin-right: 10px;
+	}
+
+	.form-fixed .uni-section-header{
+		background-color: var(--UI-BG-0);
+	}
+
+	.form-fixed .uni-section-header .uni-section__content-title{
+		font-size: 31rpx!important;
+		font-weight: bold;
+	}

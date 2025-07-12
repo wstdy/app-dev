@@ -1,0 +1,247 @@
+{
+    "globalStyle": {
+        "backgroundColor": "#F8F8F8",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "backgroundColor": "#fff",
+        "color": "#BDC3D6",
+        "selectedColor": "#253954",
+        "list": [
+            {
+                "selectedIconPath": "static/tabbar/first-active.png",
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "static/tabbar/first.png"
+            },
+            {
+                "selectedIconPath": "static/tabbar/second-active.png",
+                "pagePath": "pages/func/func",
+                "text": "功能",
+                "iconPath": "static/tabbar/second.png"
+            },
+            {
+                "selectedIconPath": "static/tabbar/third-active.png",
+                "pagePath": "pages/msg/msg",
+                "text": "消息",
+                "iconPath": "static/tabbar/third.png"
+            },
+            {
+                "selectedIconPath": "static/tabbar/fourth-active.png",
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "static/tabbar/fourth.png"
+            }
+        ],
+        "fontSize": "20rpx",
+        "borderStyle": "black",
+        "height": "108rpx"
+    },
+    "pages": [
+        {
+            "path": "pages/login/login",
+            "style": {
+                "navigationStyle": "custom",
+                "navigationBarTitleText": "uni-app"
+            }
+        },
+		{
+			"path" : "pages/login/singleLogin",
+			"style" : 
+			{
+                "navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+        {
+            "path": "pages/home/home",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "首页"
+            }
+        },
+        {
+            "path": "pages/home/form/form",
+            "style": {
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "表单"
+            }
+        },
+        {
+            "path": "pages/msg/msg",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/my/my",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/my/contact",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/my/qrcode",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/my/modify",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/func/func",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": ""
+            }
+        },
+        {
+            "path": "pages/msg/index",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "OA"
+            }
+        },
+        {
+            "path": "pages/msg/detail",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "OA详情"
+            }
+        },
+        {
+            "path": "pages/workflow/launch",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "发起流程"
+            }
+        },
+        {
+            "path": "pages/workflow/launchList",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "发起流程列表"
+            }
+        },
+        {
+            "path": "pages/workflow/index",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "流程列表"
+            }
+        },
+        {
+            "path": "pages/workflow/look",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "查看流程"
+            }
+        },
+        {
+            "path": "pages/workflow/approval",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "审批流程"
+            }
+        },
+        {
+            "path": "pages/workflow/nextTask",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "提交流程"
+            }
+        },
+        {
+            "path": "pages/dataDisplay/index",
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "数据展示"
+            }
+        },
+        {
+            "path": "pages/customForm/list",
+            "style": {
+                "navigationBarTitleText": "自定义表单列表"
+            }
+        },
+        {
+            "path": "pages/customForm/form",
+            "style": {
+                "navigationBarTitleText": "自定义表单新增"
+            }
+        },
+        {
+            "path": "pages/spotCheck/index",
+            "style": {
+                "navigationBarTitleText": "点检",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
+        }
+        // {
+        //     "path": "pages/jianyi/carmobile/list",
+        //     "style": {
+        //         "navigationBarTitleText": "移动车辆"
+        //     }
+        // },
+        // {
+        //     "path": "pages/jianyi/carmobile/container",
+        //     "style": {
+        //         "navigationBarTitleText": "新增"
+        //     }
+        // },
+        // {
+        //     "path": "pages/dev/bizoutapply/list",
+        //     "style": {
+        //         "navigationBarTitleText": "出差申请"
+        //     }
+        // },
+        // {
+        //     "path": "pages/dev/bizoutapply/container",
+        //     "style": {
+        //         "navigationBarTitleText": "新增"
+        //     }
+        // }
+    ],
+    "easycom": {
+        "custom": {
+            "^sys-dev-(.*)": "@/pages/dev/$1/form.vue",
+            "^sys-jianyi-(.*)": "@/pages/jianyi/$1/form.vue"
+        }
+    },
+    "uniIdRouter": {
+    }
+}
