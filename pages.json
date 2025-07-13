@@ -228,6 +228,14 @@
             }
         },
         {
+            "path": "pages/spotCheck/taskPart/index",
+            "style": {
+                "navigationBarTitleText": "点检部件",
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
             "path": "pages/spotCheck/taskExtension",
             "style": {
                 "navigationBarTitleText": "任务延期",

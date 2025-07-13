@@ -1,12 +1,12 @@
 <template>
-  <view class="taskArea">
+  <view class="taskPart">
     <!-- 导航 -->
     <view class="header">
       <view class="headerContent">
         <view>
           <uni-icons type="back" size="20" @tap="clickLeft">返回</uni-icons>
         </view>
-        <view class="title">点检区域</view>
+        <view class="title">点检部件</view>
         <view>
 
         </view>
@@ -16,34 +16,10 @@
     <!-- 内容 -->
     <view class="content">
       <view class="banner">
-        <view class="banner-text">点检区域q</view>
-        <view class="banner-box">
-          <view class="banner-box-item">
-            <view>点检设备</view>
-            <view class="m-value">
-              <span class="m-value-text">8</span>
-              <span>个</span>
-            </view>
-          </view>
-          <view class="banner-box-line"></view>
-          <view class="banner-box-item">
-            <view>点检部位</view>
-            <view class="m-value">
-              <span class="m-value-text">12</span>
-              <span>个</span>
-            </view>
-          </view>
-          <view class="banner-box-line"></view>
-          <view class="banner-box-item">
-            <view>点检项目</view>
-            <view class="m-value">
-              <span class="m-value-text">26</span>
-              <span>个</span>
-            </view>
-          </view>
-        </view>
+       <span>点检设备：</span>
+       <span>部件1</span>
       </view>
-      <view class="title-box">点检设备(未完成10个)</view>
+      <view class="title-box">点检项目(未完成2个)</view>
       <view class="info">
         <view class="info-top">
           <view>设备部件</view>
@@ -194,7 +170,7 @@ const shrik = (id: any) => {
 const childValue = (item: any) => {
   console.log('item', item)
   uni.navigateTo({
-    url: "/pages/spotCheck/taskPart/index"
+    url: "/pages/spotCheck/taskArea/index"
   })
 }
 
@@ -235,45 +211,31 @@ const onClickItem1 = (e) => {
 </script>
 
 <style scoped lang="less">
-.header {
-  background-color: #F3F3F3;
-  min-height: 64rpx;
-  padding: 16rpx;
-}
 
-.headerContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-uni-icon {
-  height: 27rpx;
-  color: #253954;
-}
-
-.title {
-  flex: 1;
-  text-align: center;
-  font-size: 35rpx;
-  font-weight: bold;
-  color: #253954;
-  line-height: 42rpx;
-}
-
-.action-btn {
-  margin: 0 10rpx;
-  font-size: 26rpx;
-  height: 64rpx;
-  line-height: 64rpx;
-  border-radius: 8rpx;
-  background-color: #f5f5f5;
-  color: #666;
-}
-
-.taskArea {
+.taskPart {
   padding: 0.2rem;
+
+  .header {
+    background-color: #F3F3F3;
+    min-height: 64rpx;
+    padding: 16rpx;
+
+    .headerContent {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        flex: 1;
+        text-align: center;
+        font-size: 35rpx;
+        font-weight: bold;
+        color: #253954;
+        line-height: 42rpx;
+      }
+    }
+  }
 
   .content {
     padding: 0.5rem;
@@ -282,39 +244,6 @@ uni-icon {
       padding: 0.5rem 0;
       background: white;
 
-      .banner-text {
-        font-size: 1.2rem;
-        text-align: center;
-        padding-bottom: 0.5rem;
-      }
-
-      .banner-box {
-        display: flex;
-        align-items: center;
-        padding-bottom: 0.2rem;
-        font-size: 0.8rem;
-
-        .banner-box-line {
-          width: 1px;
-          height: 2rem;
-          background: #aaaaaa;
-        }
-
-        .banner-box-item {
-          flex: 1;
-          text-align: center;
-
-          .m-value {
-            margin-top: 0.3rem;
-
-            .m-value-text {
-              font-size: 1.2rem;
-              color: rgb(0, 149, 242);
-            }
-          }
-
-        }
-      }
     }
 
     .title-box {
